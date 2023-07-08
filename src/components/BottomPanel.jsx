@@ -5,7 +5,7 @@ function BottomPanel() {
     <div className="control-panel bottom">
       <div className="panel bottom">
         <div className="panel-controls bottom">
-          <div className="tag">#campain</div>
+          <div className="tag">#campaign</div>
           <div className="tag">#tourism</div>
         </div>
       </div>
