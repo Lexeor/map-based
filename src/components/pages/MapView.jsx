@@ -8,8 +8,30 @@ function MapView() {
   return (
     <main>
       {/* <TomTomMap /> */}
-      <UniPanel side="left" position="top" />
-      <UniPanel side="right" position="bottom" />
+      <UniPanel
+        side="left"
+        position="top"
+        circleComponent={
+          <div className="circle">
+            <img src="/images/user-placeholder.png" alt="user" />
+          </div>
+        }
+      >
+        <div className="tag">#campaign</div>
+        <div className="tag">#tourism</div>
+      </UniPanel>
+      <UniPanel
+        side="right"
+        position="bottom"
+        circleComponent={
+          <button className="search">
+            <i className="ri-search-line"></i>
+          </button>
+        }
+      >
+        <div className="tag">12.05.23</div>
+        <div className="tag">12.06.23</div>
+      </UniPanel>
     </main>
   );
 }
