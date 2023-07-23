@@ -28,12 +28,8 @@ main {
 }
 
 .control-panel {
-  position: absolute;
-  right: 10px;
   display: flex;
-  flex-direction: row;
-  height: 90px;
-  z-index: 100;
+  position: absolute;
 }
 .control-panel.top {
   top: 10px;
@@ -41,48 +37,87 @@ main {
 .control-panel.bottom {
   bottom: 10px;
 }
-.control-panel .panel {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: absolute;
-  right: 45px;
-  width: 300px;
-  gap: 2px;
-  padding: 4px;
-  background-color: white;
-  border-radius: 30px 0 0 30px;
-  height: 40px;
-  z-index: 101;
+.control-panel.left {
+  left: 10px;
+  flex-direction: row-reverse;
 }
-.control-panel .panel.top::before {
+.control-panel.right {
+  right: 10px;
+  flex-direction: row;
+}
+
+.panel {
+  display: flex;
+  position: relative;
+}
+.panel.top::before {
   content: "";
   position: absolute;
   background-color: transparent;
-  bottom: -50px;
-  right: 44px;
+  bottom: 0;
+  left: 0;
   height: 50px;
   width: 30px;
-  border-top-right-radius: 15px;
-  box-shadow: 0 -25px 0 0 white;
+  border-top-left-radius: 12px;
+  box-shadow: -20px -40px 0px 0 white;
   z-index: 99;
 }
-.control-panel .panel.bottom {
-  bottom: 0;
+.panel.top::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  left: -45px;
 }
-.control-panel .panel.bottom::before {
+.panel.bottom {
+  align-items: flex-end;
+}
+.panel.bottom::before {
   content: "";
   position: absolute;
   background-color: transparent;
-  top: -49px;
-  right: 44px;
-  height: 49px;
+  bottom: 40px;
+  right: 0px;
+  height: 50px;
   width: 30px;
-  border-bottom-right-radius: 15px;
-  box-shadow: 0 25px 0 0 white;
+  border-bottom-right-radius: 12px;
+  box-shadow: 20px 40px 0px 0 white;
   z-index: 99;
 }
-.control-panel .circle {
+.panel.bottom::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  right: -45px;
+}
+.panel.left {
+  padding-left: 10px;
+}
+.panel.right {
+  padding-right: 10px;
+  justify-content: flex-end;
+}
+.panel .panel-body {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  padding: 5px;
+  gap: 5px;
+}
+.panel .panel-body.left {
+  border-radius: 0 50px 50px 0;
+}
+.panel .panel-body.right {
+  border-radius: 50px 0 0 50px;
+}
+
+.circle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,32 +127,6 @@ main {
   border-radius: 50%;
   z-index: 102;
 }
-.control-panel .circle img {
-  width: 90%;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: #d6d6d6;
-}
-
-.panel-controls {
-  width: calc(100% - 45px);
-  display: flex;
-  gap: 2px;
-  flex-direction: row;
-  height: 100%;
-  z-index: 100;
-}
-.panel-controls button {
-  border: 0;
-  color: white;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  padding: 0 12px;
-  cursor: pointer;
-}
-.panel-controls.bottom {
-  gap: 4px;
-}
-
 .month-selector-btn {
   display: flex;
   justify-content: center;

@@ -1,15 +1,15 @@
 import React from "react";
 
-import BottomPanel from "../BottomPanel";
+import UniPanel from "../UniPanel";
 import TopPanel from "../TopPanel";
 import TomTomMap from "../TomTomMap";
 
 function MapView() {
   return (
     <main>
-      <TomTomMap />
-      <TopPanel />
-      <BottomPanel />
+      {/* <TomTomMap /> */}
+      <UniPanel side="left" position="top" />
+      <UniPanel side="right" position="bottom" />
     </main>
   );
 }
