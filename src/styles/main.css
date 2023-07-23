@@ -57,7 +57,7 @@ main {
   bottom: 0;
   left: 0;
   height: 50px;
-  width: 30px;
+  width: 31px;
   border-top-left-radius: 12px;
   box-shadow: -20px -40px 0px 0 white;
   z-index: 99;
@@ -81,7 +81,7 @@ main {
   bottom: 40px;
   right: 0px;
   height: 50px;
-  width: 30px;
+  width: 31px;
   border-bottom-right-radius: 12px;
   box-shadow: 20px 40px 0px 0 white;
   z-index: 99;
