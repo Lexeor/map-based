@@ -101,6 +101,8 @@
   background-color: white;
   width: 90px;
   height: 90px;
+  max-width: 90px;
+  max-height: 90px;
   border-radius: 50%;
   z-index: 102;
 }/*# sourceMappingURL=uni-panel.css.map */
