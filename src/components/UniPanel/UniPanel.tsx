@@ -14,11 +14,11 @@ function UniPanel({
   children,
 }: UniPanelProps) {
   return (
-    <div className={`control-panel ${position} ${side}`}>
-      <div className={`panel ${position} ${side}`}>
-        <div className={`panel-body ${position} ${side}`}>{children}</div>
+    <div className={`uni-wrapper ${position} ${side}`}>
+      <div className={`uni-panel ${position} ${side}`}>
+        <div className={`uni-panel__body ${position} ${side}`}>{children}</div>
       </div>
-      <div className={`circle ${side}`}>{circleComponent}</div>
+      <div className={`uni-circle ${side}`}>{circleComponent}</div>
     </div>
   );
 }
