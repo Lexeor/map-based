@@ -1,7 +1,6 @@
 import React from "react";
 
-import UniPanel from "../UniPanel";
-import TopPanel from "../TopPanel";
+import UniPanel from "../UniPanel/UniPanel";
 import TomTomMap from "../TomTomMap";
 
 function MapView() {

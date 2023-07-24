@@ -1,3 +1,5 @@
+import "./uni-panel.css";
+
 type UniPanelProps = {
   side: "left" | "right";
   position: "top" | "bottom";
