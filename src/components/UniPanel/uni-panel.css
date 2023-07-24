@@ -1,6 +1,7 @@
 .control-panel {
   display: flex;
   position: absolute;
+  max-width: calc(100vw - 20px);
 }
 .control-panel.top {
   top: 10px;
@@ -80,6 +81,11 @@
   height: 40px;
   padding: 5px;
   gap: 5px;
+  max-width: calc(100vw - 20px - 90px - 10px);
+  overflow-y: scroll;
+}
+.panel .panel-body::-webkit-scrollbar {
+  display: none;
 }
 .panel .panel-body.left {
   border-radius: 0 50px 50px 0;
